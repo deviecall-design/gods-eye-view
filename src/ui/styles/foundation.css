@@ -1,6 +1,9 @@
 /* ═══════════════════════════════════════════════
    GOD'S EYE VIEW — Dark Sci-Fi UI
    Apple meets Blade Runner
+
+   Ember fork: the title wordmark and logo use #ff5a1f.
+   The rest of the HUD keeps the upstream accent.
    ═══════════════════════════════════════════════ */
 
 :root {
@@ -504,7 +507,7 @@ body.cockpit-mode #cockpit-cloud-effects.active {
   left: -20px;
   width: 200px;
   height: 80px;
-  background: radial-gradient(ellipse, var(--accent-dim) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255, 90, 31, 0.28) 0%, transparent 70%);
   filter: blur(20px);
   opacity: 0.6;
 }
@@ -527,7 +530,7 @@ body.cockpit-mode #cockpit-cloud-effects.active {
   display: block;
   width: 52px;
   height: auto;
-  filter: drop-shadow(0 0 12px rgba(0, 246, 255, 0.5));
+  filter: drop-shadow(0 0 12px rgba(255, 90, 31, 0.55));
 }
 
 #title-bar .title-logo::before,
@@ -600,14 +603,26 @@ body.cockpit-mode #cockpit-cloud-effects.active {
 
 #title-bar .title-accent,
 .loader-content .title-accent {
-  color: var(--accent);
+  color: #ff5a1f;
   font-weight: 300;
+}
+
+#title-bar .title-word::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 14px;
+  border-radius: 50%;
+  background: #ff5a1f;
+  box-shadow: 0 0 0 4px rgba(255, 90, 31, 0.22);
+  vertical-align: 3px;
 }
 
 #title-bar .subtitle {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   color: var(--text-dim);
   margin-top: 8px;
   text-transform: uppercase;

@@ -401,7 +401,7 @@
   width: 128px;
   height: auto;
   margin: 0 auto 24px;
-  filter: drop-shadow(0 0 24px rgba(0, 246, 255, 0.42));
+  filter: drop-shadow(0 0 24px rgba(255, 90, 31, 0.45));
   animation: logo-pulse 2s ease-in-out infinite;
 }
 

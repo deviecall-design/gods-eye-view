@@ -1,3 +1,5 @@
+> **Ember** is Damien's deployment of this project. The software is [God's Eye View](https://github.com/bilawalsidhu/gods-eye-view) by Bilawal Sidhu, Copyright (c) 2026 Bilawal Sidhu, used under the MIT license in [`LICENSE`](LICENSE). Third-party datasets and 3D models keep their own terms (`DATA_SOURCES.md`, `public/models/README.md`). Ember is an independent fork and is not affiliated with Palantir, Anduril, or Lattice.
+
 <div align="center">
 
 # 🌐 God's Eye View
