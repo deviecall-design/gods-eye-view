@@ -12,6 +12,7 @@ const require = createRequire(import.meta.url);
 
 const PROVIDER_FIELDS = [
   'GOOGLE_MAPS_API_KEY',
+  'GOOGLE_MAPS_SERVER_API_KEY',
   'CESIUM_ION_TOKEN',
   'OPENAI_API_KEY',
   'AISSTREAM_API_KEY',
@@ -112,6 +113,9 @@ test('Pinokio menu resolves the nested install marker and exposes each lifecycle
     runtime.url = url;
     const items = await menu(kernel, info);
     assert.equal(items.filter((item) => item.default).length, 1);
+    const ready = installed && running === 'start.js' && Boolean(url);
+    assert.equal(items[0].popout, ready ? true : undefined);
+    assert.ok(items.slice(1).every((item) => item.popout === undefined));
     return items.map(({ text, href, default: isDefault = false }) => ({ text, href, default: isDefault }));
   };
 
